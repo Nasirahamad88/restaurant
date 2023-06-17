@@ -1,32 +1,29 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-const containerStyle = {
-  width: '100%',
-  height: '400px'
-};
-
-const center = {
-  lat: 40.6281,
-  lng: -74.4141
-};
-
-const position = {
-  lat: 40.6281,
-  lng: -74.4141
-};
+import ReactMapGL, { Marker } from 'react-map-gl';
 
 const Map = () => {
+  const mapboxAccessToken = '';
+
+  const [viewport, setViewport] = React.useState({
+    latitude: 40.7128,
+    longitude: -74.006,
+    zoom: 10
+  });
+
   return (
-    <LoadScript googleMapsApiKey="YOUR_API_KEY">
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={12}
+    <div style={{ height: '400px' }}>
+      <ReactMapGL
+        {...viewport}
+        width="100%"
+        height="100%"
+        mapboxApiAccessToken={mapboxAccessToken}
+        onViewportChange={(newViewport) => setViewport(newViewport)}
       >
-        <Marker position={position} />
-      </GoogleMap>
-    </LoadScript>
+        <Marker latitude={40.7128} longitude={-74.006}>
+          <div>Marker Content</div>
+        </Marker>
+      </ReactMapGL>
+    </div>
   );
 };
 
