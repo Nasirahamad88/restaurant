@@ -30,7 +30,18 @@ Come and experience the magic of South Star Restaurant. Join us today and treat 
             </div>
           </Col>
           <Col md={6}>
-            <div className="about-image p-4">
+      <div className="about-image p-4 wide">
+        <img src={aboutImage1} alt="About" style={{ width: '250px', height: 'auto' }} />
+      </div>
+      <div className="about-image p-4">
+        <img src={aboutImage2} alt="About" style={{ width: '250px', height: 'auto' }} />
+      </div>
+      <div className="about-image p-4">
+        <img src={aboutImage3} alt="About" style={{ width: '250px', height: 'auto' }} />
+      </div>
+    </Col>
+          {/* <Col md={6}>
+            <div className="about-image p-4 wide">
               <img src={aboutImage1} alt="About" />
             </div>
             <div className="about-image p-4">
@@ -39,7 +50,7 @@ Come and experience the magic of South Star Restaurant. Join us today and treat 
             <div className="about-image p-4">
               <img src={aboutImage3} alt="About" />
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>
