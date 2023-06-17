@@ -5,7 +5,7 @@ import slide03 from "./assets/images/slide-03.jpg";
 
 const Carousel = () => {
   return (
-    <div id="carouselExampleCaptions" className="carousel slide">
+    <div id="carouselExampleCaptions" className="carousel slide my-5">
       {/* Carousel Indicators */}
       <div className="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
